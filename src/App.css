@@ -1,13 +1,5 @@
 :root {
     --main-color: #fd8421;
-    --main-color-light: #f39b53;
-    --main-color-shadow: #d16a15;
-    --accent-color: #fd8421;
-
-    --hole-neutral: #aeaecb;
-    --hole-light: #cbcbdb;
-    --hole-shadow: #9595b0;
-    --thumb-shine: rgba(255, 255, 255, 0.4);
 
     --l-neutral: #dedeed;
     --l-light: #f1f1f7;
@@ -31,6 +23,41 @@ body {
     place-items: center;
 }
 
+.title {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+    padding: 10px 20px;
+    display: grid;
+    place-items: center;
+}
+
+.title > a {
+    color: var(--l-object);
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 32px;
+    filter: blur(1.5px);
+    position: absolute;
+    transition-duration: 300ms;
+    background: var(--l-neutral);
+    box-shadow: 7px 7px 15px var(--l-shadow), -7px -7px 15px var(--l-light);
+}
+.title:hover:before {
+    filter: blur(1.5px);
+    box-shadow: -4px -4px 10px var(--l-shadow), 4px 4px 10px var(--l-light);
+    color: var(--main-color);
+}
+
 .neu-input-container {
     position: relative;
     height: 50px;
@@ -50,7 +77,6 @@ body {
 }
 
 .neu-input-container > input {
-    /* To remove default styles appplied by webkit browsers */
     -webkit-appearance: none;
     margin: 0;
     width: 100%;
@@ -62,7 +88,6 @@ body {
     color: dimgrey;
 }
 .neu-input-container > input:focus {
-    /* To remove default (mostly blue) outline appplied by browsers on :focus */
     outline: 0;
 }
 

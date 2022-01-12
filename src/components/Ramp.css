@@ -37,12 +37,26 @@
 }
 .list-item {
     width: 90%;
-    margin: 8px 0;
+    margin: 6px 0;
     display: grid;
     place-items: center;
     font-size: 1.1em;
     padding: 0 14px;
     border-radius: 28px;
+    z-index: 1;
     color: var(--main-color);
+}
+
+.list-item:before {
+    content: '';
+    width: 90%;
+    z-index: -1;
+    margin: 8px 0;
+    padding: 20px;
+    border-radius: 28px;
+    filter: blur(1.5px);
+    position: absolute;
+    transition-duration: 300ms;
+    background: var(--l-neutral);
     box-shadow: 7px 7px 15px var(--l-shadow), -7px -7px 15px var(--l-light);
 }

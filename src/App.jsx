@@ -7,16 +7,26 @@ function App() {
     const [input, setInput] = useState('[1, 2, 3]');
     const handleChange = (e) => setInput(e.target.value);
     return (
-        <div>
-            <Ramp input={input} />
-            <div className="neu-input-container" style={{ marginBottom: 10 }}>
-                <input
-                    placeholder="Input Prop"
-                    onChange={handleChange}
-                    value={input}
-                />
+        <>
+            <div className="title">
+                <a className="title-link" href="https://www.rishablamba.com/">
+                    RishabLamba.com
+                </a>
             </div>
-        </div>
+            <div>
+                <Ramp input={input} />
+                <div
+                    className="neu-input-container"
+                    style={{ marginBottom: 10 }}
+                >
+                    <input
+                        placeholder="Input Prop"
+                        onChange={handleChange}
+                        value={input}
+                    />
+                </div>
+            </div>
+        </>
     );
 }
 
