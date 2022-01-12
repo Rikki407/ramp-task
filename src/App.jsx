@@ -13,7 +13,7 @@ function App() {
                     RishabLamba.com
                 </a>
             </div>
-            <div>
+            <div style={{marginTop: 80}}>
                 <Ramp input={input} />
                 <div
                     className="neu-input-container"
