@@ -4,7 +4,7 @@ import './App.css';
 import Ramp from './components/Ramp';
 
 function App() {
-    const [input, setInput] = useState('[1, 2, 3]');
+    const [input, setInput] = useState('["Hello", "World", 407]');
     const handleChange = (e) => setInput(e.target.value);
     return (
         <>
@@ -20,10 +20,13 @@ function App() {
                     style={{ marginBottom: 10 }}
                 >
                     <input
-                        placeholder="Input Prop"
+                        placeholder="Enter input prop in JS..."
                         onChange={handleChange}
                         value={input}
                     />
+                    <div className="instructions">
+                        change the input prop from here
+                    </div>
                 </div>
             </div>
         </>
