@@ -23,7 +23,22 @@ const DateTime = () => {
 };
 
 const List = ({ input }) => {
-    return input.map((item, idx) => <div key={idx}>{item}</div>);
+    return input.map((item, idx) => (
+        <motion.div
+            className="list-item"
+            initial={{ opacity: 0, scale: 0, height: 0 }}
+            animate={{ opacity: 1, scale: 1, height: 55 }}
+            transition={{
+                delay: 0.1 * idx,
+                duration: 0.05,
+                type: 'spring',
+                stiffness: 120,
+            }}
+            key={idx}
+        >
+            <span>{item}</span>
+        </motion.div>
+    ));
 };
 
 const Ramp = ({ input }) => {

@@ -19,7 +19,6 @@
     -ms-user-select: none;
     user-select: none;
 }
-
 .clock:before {
     content: '';
     width: 150px;
@@ -34,4 +33,16 @@
 }
 .clock > div {
     z-index: 1;
+    color: var(--main-color);
+}
+.list-item {
+    width: 90%;
+    margin: 8px 0;
+    display: grid;
+    place-items: center;
+    font-size: 1.1em;
+    padding: 0 14px;
+    border-radius: 28px;
+    color: var(--main-color);
+    box-shadow: 7px 7px 15px var(--l-shadow), -7px -7px 15px var(--l-light);
 }
