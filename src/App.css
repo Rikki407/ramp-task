@@ -33,16 +33,16 @@ body {
 
 .neu-input-container {
     position: relative;
-    height: 30px;
+    height: 50px;
     flex: 1;
-    padding: 0 4px;
+    padding: 0 14px;
 }
 .neu-input-container:before {
     cursor: pointer;
     content: '';
     position: absolute;
     width: 100%;
-    height: 30px;
+    height: 50px;
     left: 0px;
     border-radius: 26px;
     filter: blur(1.5px);
@@ -54,12 +54,22 @@ body {
     -webkit-appearance: none;
     margin: 0;
     width: 100%;
-    height: 30px;
+    height: 100%;
     background: transparent;
     position: relative;
     border: none;
+    font-size: 1.1em;
+    color: dimgrey;
 }
 .neu-input-container > input:focus {
     /* To remove default (mostly blue) outline appplied by browsers on :focus */
     outline: 0;
+}
+
+::placeholder {
+    color: var(--l-object);
+    opacity: 1;
+}
+::-ms-input-placeholder {
+    color: var(--l-object);
 }
