@@ -1,18 +1,24 @@
 import './Ramp.css';
 import React from 'react';
 import useDateTime from '../hooks/useDateTime';
+import { motion } from 'framer-motion';
 
 const DateTime = () => {
     const { seconds, minutes, hours, month, day, year } = useDateTime();
 
     return (
-        <div className="clock">
+        <motion.div
+            className="clock"
+            initial={{ opacity: 0, scale: 0, height: 0 }}
+            animate={{ opacity: 1, scale: 1, height: 150 }}
+            transition={{ duration: 0.2, type: 'spring', stiffness: 120 }}
+        >
             <div>{month + ' ' + day}</div>
             <div style={{ fontSize: '1.9em' }}>{year}</div>
             <div>
                 {hours} : {minutes} : {seconds}
             </div>
-        </div>
+        </motion.div>
     );
 };
 
