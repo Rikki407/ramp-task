@@ -1,11 +1,24 @@
-import React from 'react'
+import React from 'react';
+import useDateTime from '../hooks/useDateTime';
 
-const Ramp = () => {
+const DateTime = () => {
+    const { seconds, minutes, hours, month, day, year } = useDateTime();
+
     return (
-        <div>
-            RAMP Component
-        </div>
-    )
-}
+        <>
+            <div>
+                {month + ' '}
+                {day}, {year}
+            </div>
+            <div>
+                {hours} : {minutes} : {seconds}
+            </div>
+        </>
+    );
+};
 
-export default Ramp
+const Ramp = ({ input }) => {
+    return <DateTime />;
+};
+
+export default Ramp;

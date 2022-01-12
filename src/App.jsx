@@ -6,7 +6,7 @@ import Ramp from './components/Ramp';
 function App() {
     return (
         <div>
-            <div className="neu-input-container">
+            <div className="neu-input-container" style={{ marginBottom: 10 }}>
                 <input placeholder="Input Prop" />
             </div>
             <Ramp />
